@@ -1,0 +1,20 @@
+pom.xml 
+	it contains all the dep that we need for project. 
+	
+	in spring boot we got tomcat starter so we don't need to install tomcat or 
+	need to link tomcat from external
+	
+	we have starter dep in pom.xml this starter contains n number of
+	other dep. 
+	
+we dont have spring.xml or web.xml in spring boot. 
+if we want to provide custom configuration we can use 
+resources/application.properties 
+
+application.properties file contains data in 
+	key:value 
+	key=value 
+    format ,  we can use # for comment 
+    
+when we start app server/ioc container will read all the information from application.properties 
+
