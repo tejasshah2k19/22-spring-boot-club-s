@@ -12,8 +12,8 @@ import com.dao.UserDao;
 public class SessionController {
 
 	@Autowired
-	UserDao userDao ;
-	
+	UserDao userDao;
+
 	@GetMapping("/signup")
 	public String signup() {
 		return "Signup";// view jsp
@@ -24,5 +24,24 @@ public class SessionController {
 		System.out.println(user.getFirstName());
 		userDao.insertUser(user);
 		return "Login";
+	}
+
+	@GetMapping("/login")
+	public String login() {
+		
+		return "Login";
+	}
+	
+	@PostMapping("/authenticate")
+	public String authenticate(UserBean user) {
+
+		UserBean dbUser = userDao.getUserByEmail(user.getEmail());
+		if (dbUser == null) {
+			return "Login";
+		} else if (dbUser.getPassword().equals(user.getPassword())) {
+			return "Home";
+		} else {
+			return "Login";
+		}
 	}
 }
