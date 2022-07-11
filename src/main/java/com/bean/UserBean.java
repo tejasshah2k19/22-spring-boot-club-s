@@ -6,6 +6,7 @@ public class UserBean {
 	String firstName;
 	String email;
 	String password;
+	Integer otp;
 
 	public int getUserId() {
 		return userId;
@@ -37,6 +38,14 @@ public class UserBean {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public Integer getOtp() {
+		return otp;
+	}
+
+	public void setOtp(Integer otp) {
+		this.otp = otp;
 	}
 
 }

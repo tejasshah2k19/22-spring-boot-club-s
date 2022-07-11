@@ -28,4 +28,14 @@ public class UserDao {
 		}
 		return user;
 	}
+
+	public void updateOtp(String email, int otp) {
+		stmt.update("update users set otp = ? where email = ? ", otp, email);
+
+	}
+
+	public void updatePassword(String email, String password) {
+		stmt.update("update users set otp = ? , password =  ?  where email = ? ", -1, password, email);
+
+	}
 }

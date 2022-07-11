@@ -13,5 +13,7 @@
 		Password :<input type="text" name="password"> <br><br>
 		<input type="submit" value="Login"/>
 	</form>
+	<br>
+	<a href="forgetpassword">ForgetPassword</a>
 </body>
 </html>
